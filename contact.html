@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact WhatsApp Innovant</title>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+    <div class="logo">Shopping</div>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Accueil</a>
+      <a href="page2.html">Boutique</a>
+      <a href="page2.html">Homme</a>
+      <a href="page2.html">Femme</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    
+
+
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <section class="whatsapp-section">
+    <div class="background-blur"></div>
+    <div class="contact-container">
+      <h2>Contactez-nous sur <span>WhatsApp</span></h2>
+      <p>Discutez directement avec nous pour toute question ou demande — réponse rapide garantie !</p>
+      
+      <div class="whatsapp-bubble">
+        <div class="glow"></div>
+       <a href="https://api.whatsapp.com/send?phone=212619318483&text=Bonjour%20je%20souhaite%20plus%20d'informations%20!"
+   target="_blank"
+   class="whatsapp-btn">
+   💬 Envoyer un message
+</a>
+      </div>
+    </div>
+    
+
+
+
+
+
+
+
+
+  </section>
+  
+    
+ <input type="text" id="msg" placeholder="Écris ton message ici..." />
+<button onclick="send()">Envoyer sur WhatsApp</button>
+
+<script>
+function send() {
+  const numero = "212612345678";
+  const msg = document.getElementById("msg").value;
+  const lien = `https://wa.me/${numero}?text=${encodeURIComponent(msg)}`;
+  window.open(lien, "_blank");
+}
+</script>
+
+
+  
+</body>
+</html>

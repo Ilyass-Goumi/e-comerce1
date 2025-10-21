@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+
+    <!-- ======== NAVBAR ======== -->
+ <header class="navbar">
+    <div class="logo">Shopping</div>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Accueil</a>
+      <a href="page2.html">Femme</a>
+      <a href="page2.html">Homme</a>
+    </nav>
+
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+
+
+
+
+
+
+
+
+   <!-- ======= SECTION PRODUIT ======= -->
+           <section class="collection-page">
+    <h2>Notre Collection</h2>
+
+
+
+       <section class="gallery-section">
+    <div class="gallery-container">
+      <!-- Images miniatures -->
+      <div class="thumbnails">
+        <img src="https://m.media-amazon.com/images/I/71I86FWcp8L._AC_SY500_.jpg" alt="thumb1" class="thumb active">
+        <img src="https://m.media-amazon.com/images/I/71I7Vx541+L._AC_SY500_.jpg" alt="thumb2" class="thumb">
+        <img src="https://m.media-amazon.com/images/I/91MHaBkbTML._AC_SY500_.jpg" alt="thumb3" class="thumb">
+       
+      </div>
+
+      <!-- Image principale -->
+      <div class="main-image">
+        <img id="displayedImage" src="https://m.media-amazon.com/images/I/7198bGYHOoL._AC_SY500_.jpg" alt="main">
+      </div>
+    </div>
+  </section>
+
+
+
+     <script>const thumbnails = document.querySelectorAll(".thumb");
+const mainImage = document.getElementById("displayedImage");
+
+thumbnails.forEach((thumb) => {
+  thumb.addEventListener("click", () => {
+    // Enlève la classe active des autres
+    thumbnails.forEach((t) => t.classList.remove("active"));
+    thumb.classList.add("active");
+
+    // Animation de transition
+    mainImage.classList.add("fade-out");
+
+    setTimeout(() => {
+      mainImage.src = thumb.src;
+      mainImage.classList.remove("fade-out");
+      mainImage.classList.add("fade-in");
+
+      setTimeout(() => mainImage.classList.remove("fade-in"), 500);
+    }, 300);
+  });
+});
+</script>
+
+
+   
+
+    <!-- Description -->
+    <div class="collection-description" id="collectionDescription">
+      <h3>Peignoir Luxe pour Femme 100% Coton</h3>
+      <p>
+
+
+        Découvrez le confort absolu avec nos peignoirs de luxe, conçus pour ceux qui aiment allier élégance et bien-être.
+Fabriqués en coton premium ultra-doux, ils offrent une chaleur agréable tout en restant respirants.
+Avec leur finitions raffinées et leur coupe moderne, nos peignoirs sont parfaits pour la maison, le spa ou après la douche.
+Disponible en plusieurs couleurs tendance et tailles variées, c’est le cadeau idéal pour soi ou pour offrir.
+
+✨ Confort, style et qualité réunis dans un seul peignoir.
+              <br>
+        <h1>Taille disponible :</h1>
+        <button>M</button>
+        <button>L</button>
+        <button>XL</button>
+        <button>XXL</button>
+      
+         
+      </p>
+      <ul>
+        <li>✔  🛁 Idéal pour spa, hôtel ou usage domestique</li>
+          <li>  ✔   🔥 Disponible en plusieurs couleurs élégantes</li>
+          <li>✔    👔 Lavable en machine</li>        
+       
+      </ul>
+    </div>
+  </section>
+
+   <!-- foter section  -->
+ <footer class="footer">               
+  <div class="footer-container">
+
+    <div class="footer-about">
+      <h2>Peignoirs Élégants</h2>
+      <p>
+        Offrez-vous le confort absolu avec nos peignoirs de luxe. 
+        Chaque modèle est conçu avec des tissus doux et respirants, 
+        parfaits pour vos moments de détente à la maison, à l’hôtel ou au spa.
+      </p>
+    </div>
+
+    <div class="footer-links">
+      <h3>Liens utiles</h3>
+      <ul>
+        <li><a href="#">Accueil</a></li>
+        <li><a href="#">Boutique</a></li>
+        <li><a href="#">Promotions</a></li>
+        <li><a href="#">À propos</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-info">
+      <h3>Informations Peignoirs</h3>
+      <ul>
+        <li><a href="#">Guide des tailles</a></li>
+        <li><a href="#">Conseils d’entretien</a></li>
+        <li><a href="#">Livraison & Retours</a></li>
+        <li><a href="#">Matières & Qualité</a></li>
+        <li><a href="#">FAQ Peignoirs</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-contact">
+      <h3>Contact</h3>
+      <p>📍 Casablanca, Maroc</p>
+      <p>📞 +212 6 45 78 12 90</p>
+      <p>✉️ contact@peignoirs-elegants.ma</p>
+      <p>🕒 Lun - Sam : 9h00 - 20h00</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Peignoirs Élégants — Confort et style pour chaque instant.</p>
+  </div>
+</footer>
+
+
+
+
+  
+<script src="script.js"></script>
+</body>
+</html>
